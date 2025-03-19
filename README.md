@@ -37,8 +37,7 @@ NexGen ISA 是一个全新的指令集架构，专为高性能计算和游戏优
 
 - **Linux 内核**：实现 `arch/nexgen/` 目录，支持虚拟内存、中断处理和系统调用。
 - **Debian 根文件系统**：使用 `debootstrap` 构建基础系统，配置内核启动参数。
--
--
+
 ### NexGen ISA 采用固定 32 位指令长度，支持以下编码格式：
 - R-Type	opcode[6] + rd[5] + funct3[3] + rs1[5] + rs2[5] + funct7[7]	 寄存器-寄存器操作
 - I-Type	opcode[6] + rd[5] + funct3[3] + rs1[5] + imm[12]	立即数操作
