@@ -1,3 +1,4 @@
+# 中文Chinese
 # NexGen ISA
 
 NexGen ISA 是一个全新的指令集架构，专为高性能计算和游戏优化设计。它完全独立于 RISC-V，但保持二进制兼容性，支持标量、向量、矩阵和张量计算。本仓库包含完整的指令集定义、CSV 对照表和开发文档。
@@ -13,7 +14,7 @@ NexGen ISA 是一个全新的指令集架构，专为高性能计算和游戏优
 
 ## 指令集 CSV 文件(指令.csv)
 
-涵盖以下类别：
+**涵盖以下类别**：
 
 1. **标量指令**：整数和浮点运算。
 2. **向量指令**：SIMD 加速计算。
@@ -48,4 +49,72 @@ NexGen ISA 是一个全新的指令集架构，专为高性能计算和游戏优
 
 ## 联系方式
 
-- 邮箱：studiofp@126.com
+- 邮箱：**studiofp@126.com**
+# 英语English
+# NexGen ISA
+NexGen ISA is a brand-new instruction set architecture specifically designed for high-performance computing and gaming optimization. It is entirely independent of RISC-V but maintains binary compatibility, supporting scalar, vector, matrix, and tensor computations. This repository contains the complete instruction set definition, CSV reference tables, and development documentation.
+
+## Instruction Set Features
+- **High-Performance Computing**: Supports 512-bit vector registers and 4x4 matrix operations.
+
+- **Gaming Optimization**: Built-in instructions for ray tracing, physical collision detection, and texture sampling.
+
+- **Operating System Support**: Full support for virtual memory, multi-core scheduling, and system calls.
+
+- **Device Drivers**: Provides instructions for UART, SPI, I2C, GPU, and audio device drivers.
+
+- **Interrupt Priority**: Supports 16 levels of interrupt priority.
+
+- **CSR Extension**: Supports hardware thread management and timers.
+
+## Instruction Set CSV File (指令.csv)
+- **Covers the following categories**:
+
+- **Scalar Instructions**: Integer and floating-point operations.
+
+- **Vector Instructions**: SIMD-accelerated computations.
+
+- **Matrix Instructions**: 4x4 matrix operations.
+
+- **Memory Management**: Load, store, and memory barrier instructions.
+
+- **Privileged Instructions**: System calls, exception handling, and CSR operations.
+
+- **Atomic Operations**: Multi-core synchronization support.
+
+- **I/O Instructions**: Device interaction and configuration.
+
+- **Device Driver Instructions**: Support for UART, SPI, I2C, GPU, and audio devices.
+
+- **CSR Definitions**: Adds 10 new CSRs for hardware thread management and timers.
+
+## Development Guide
+### 1. CPU Design
+- **Pipeline**: A 7-stage pipeline is recommended (fetch, decode, issue, execute, memory, writeback, commit).
+
+- **Cache**: Separate L1 Cache with shared L2 Cache.
+
+- **Branch Prediction**: TAGE-SC predictor + RAS return address stack.
+
+### 2. Operating System Porting
+- **Linux Kernel**: Implement the arch/nexgen/ directory to support virtual memory, interrupt handling, and system calls.
+
+- **Debian Root Filesystem**: Use debootstrap to build the base system and configure kernel boot parameters.
+
+### NexGen ISA uses a fixed 32-bit instruction length and supports the following encoding formats:
+- R-Type: opcode[6] + rd[5] + funct3[3] + rs1[5] + rs2[5] + funct7[7] (Register-Register operations)
+
+- I-Type: opcode[6] + rd[5] + funct3[3] + rs1[5] + imm[12] (Immediate operations)
+
+- S-Type: opcode[6] + imm[5] + funct3[3] + rs1[5] + rs2[5] + imm[7] (Store operations)
+
+- B-Type: opcode[6] + imm[5] + funct3[3] + rs1[5] + rs2[5] + imm[7] (Conditional branches)
+
+- M-Type: opcode[6] + rd[5] + funct3[3] + rs1[5] + rs2[5] + funct7[7] (Matrix operations)
+
+- V-Type: opcode[6] + vd[5] + funct3[3] + vs1[5] + vs2[5] + funct7[7] (Vector operations)
+
+## Contact Information
+
+- Email: **studiofp@126.com**
+
