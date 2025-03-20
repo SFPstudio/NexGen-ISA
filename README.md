@@ -40,12 +40,12 @@ NexGen ISA 是一个全新的指令集架构，专为高性能计算和游戏优
 - **Debian 根文件系统**：使用 `debootstrap` 构建基础系统，配置内核启动参数。
 
 ### NexGen ISA 采用固定 32 位指令长度，支持以下编码格式：
-- R-Type	opcode[6] + rd[5] + funct3[3] + rs1[5] + rs2[5] + funct7[7]	 寄存器-寄存器操作
-- I-Type	opcode[6] + rd[5] + funct3[3] + rs1[5] + imm[12]	立即数操作
-- S-Type	opcode[6] + imm[5] + funct3[3] + rs1[5] + rs2[5] + imm[7]	存储操作
-- B-Type	opcode[6] + imm[5] + funct3[3] + rs1[5] + rs2[5] + imm[7]	条件分支
-- M-Type	opcode[6] + rd[5] + funct3[3] + rs1[5] + rs2[5] + funct7[7]	矩阵操作
-- V-Type	opcode[6] + vd[5] + funct3[3] + vs1[5] + vs2[5] + funct7[7]	向量操作
+- **R-Type**	opcode[6] + rd[5] + funct3[3] + rs1[5] + rs2[5] + funct7[7]	 寄存器-寄存器操作
+- **I-Type**	opcode[6] + rd[5] + funct3[3] + rs1[5] + imm[12]	立即数操作
+- **S-Type**	opcode[6] + imm[5] + funct3[3] + rs1[5] + rs2[5] + imm[7]	存储操作
+- **B-Type**	opcode[6] + imm[5] + funct3[3] + rs1[5] + rs2[5] + imm[7]	条件分支
+- **M-Type**	opcode[6] + rd[5] + funct3[3] + rs1[5] + rs2[5] + funct7[7]	矩阵操作
+- **V-Type**	opcode[6] + vd[5] + funct3[3] + vs1[5] + vs2[5] + funct7[7]	向量操作
 
 ## 联系方式
 
@@ -102,17 +102,17 @@ NexGen ISA is a brand-new instruction set architecture specifically designed for
 - **Debian Root Filesystem**: Use debootstrap to build the base system and configure kernel boot parameters.
 
 ### NexGen ISA uses a fixed 32-bit instruction length and supports the following encoding formats:
-- R-Type: opcode[6] + rd[5] + funct3[3] + rs1[5] + rs2[5] + funct7[7] (Register-Register operations)
+- **R-Type**: opcode[6] + rd[5] + funct3[3] + rs1[5] + rs2[5] + funct7[7] (Register-Register operations)
 
-- I-Type: opcode[6] + rd[5] + funct3[3] + rs1[5] + imm[12] (Immediate operations)
+- **I-Type**: opcode[6] + rd[5] + funct3[3] + rs1[5] + imm[12] (Immediate operations)
 
-- S-Type: opcode[6] + imm[5] + funct3[3] + rs1[5] + rs2[5] + imm[7] (Store operations)
+- **S-Type**: opcode[6] + imm[5] + funct3[3] + rs1[5] + rs2[5] + imm[7] (Store operations)
 
-- B-Type: opcode[6] + imm[5] + funct3[3] + rs1[5] + rs2[5] + imm[7] (Conditional branches)
+- **B-Type**: opcode[6] + imm[5] + funct3[3] + rs1[5] + rs2[5] + imm[7] (Conditional branches)
 
-- M-Type: opcode[6] + rd[5] + funct3[3] + rs1[5] + rs2[5] + funct7[7] (Matrix operations)
+- **M-Type**: opcode[6] + rd[5] + funct3[3] + rs1[5] + rs2[5] + funct7[7] (Matrix operations)
 
-- V-Type: opcode[6] + vd[5] + funct3[3] + vs1[5] + vs2[5] + funct7[7] (Vector operations)
+- **V-Type**: opcode[6] + vd[5] + funct3[3] + vs1[5] + vs2[5] + funct7[7] (Vector operations)
 
 ## Contact Information
 
